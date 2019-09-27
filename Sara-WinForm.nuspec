@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+  <metadata>
+    <id>Sara-WinForm</id>
+    <version>1.2.0</version>
+    <title>Sara WinForm C#</title>
+    <authors>Sara LaFleur</authors>
+    <owners>Sara LaFleur</owners>
+    <projectUrl>https://github.com/saralafleur/Sara-WinForm</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/saralafleur/Sara-Common/master/Avatar4.jpg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>...</description>
+    <releaseNotes>Initial version.</releaseNotes>
+    <copyright>Sara LaFleur, 2019</copyright>
+    <tags></tags>
+    <license type="file">LICENSE.txt</license>
+    <repository type="git" url="https://github.com/saralafleur/Sara-WinForm.git"/>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework="net48" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework="net48" />
+      <frameworkAssembly assemblyName="System.Drawing" targetFramework="net48" />
+      <frameworkAssembly assemblyName="System.Windows.Forms" targetFramework="net48" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework="net48" />
+    </frameworkAssemblies>
+    <dependencies>
+      <group targetFramework="net48">
+        <dependency id="Sara-Common" version="[1.2.0,2)" />
+        <dependency id="Sara-Logging" version="[1.2.0,2)" />
+        <dependency id="WeifenLou.WinFromsUI.Docking" version="2.1.0" />
+        <dependency id="System.IO.Compression" version="4.3.0" />
+        <dependency id="System.Security.AccessControl" version="4.6.0" />
+        <dependency id="System.Security.Permissions" version="4.6.0" />
+        <dependency id="System.Security.Principal.Windows" version="4.6.0" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- Sara.NETFramework.WinForm -->
+    <file src=".NET Framework\Sara.NETFramework.WinForm\bin\Release\Sara.NETFramework.WinForm.dll" target="lib\net48" />
+    <file src=".NET Framework\Sara.NETFramework.WinForm\bin\Release\Sara.NETFramework.WinForm.pdb" target="lib\net48" />
+
+    <!-- Sara.NETFramework.WinForm.Notification -->
+    <file src=".NET Framework\Sara.NETFramework.WinForm.Notification\bin\Release\Sara.NETFramework.WinForm.Notification.dll" target="lib\net48" />
+    <file src=".NET Framework\Sara.NETFramework.WinForm.Notification\bin\Release\Sara.NETFramework.WinForm.Notification.pdb" target="lib\net48" />
+
+    <!-- Sara.NETFramework.WinForm.MVVM -->
+    <file src=".NET Framework\Sara.NETFramework.WinForm.MVVM\bin\Release\Sara.NETFramework.WinForm.MVVM.dll" target="lib\net48" />
+    <file src=".NET Framework\Sara.NETFramework.WinForm.MVVM\bin\Release\Sara.NETFramework.WinForm.MVVM.pdb" target="lib\net48" />
+
+    <!-- License -->
+    <file src="LICENSE.txt" target="" />
+  </files>
+</package>

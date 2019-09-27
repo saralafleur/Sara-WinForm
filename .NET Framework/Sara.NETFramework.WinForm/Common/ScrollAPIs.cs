@@ -1,0 +1,63 @@
+﻿using System;
+using System.Runtime.InteropServices;
+
+namespace Sara.NETFramework.WinForm.Common
+{
+
+    /// <summary>
+    /// Provides scroll commands for things like Multiline Textboxes, UserControls, etc.
+    /// </summary>
+    public static class ScrollApIs
+    {
+        [DllImport("user32.dll")]
+        public static extern bool LockWindowUpdate(IntPtr hWndLock);
+        [DllImport("user32.dll")]
+        internal static extern int GetScrollPos(IntPtr hWnd, int nBar);
+
+        [DllImport("user32.dll")]
+        internal static extern int SetScrollPos(IntPtr hWnd, int nBar, int nPos, bool bRedraw);
+
+        [DllImport("user32.dll")]
+        internal static extern int SendMessage(IntPtr hWnd, int wMsg, IntPtr wParam, IntPtr lParam);
+
+        public enum ScrollbarDirection
+        {
+            Horizontal = 0,
+            Vertical = 1,
+        }
+
+        private enum Messages
+        {
+            WM_HSCROLL = 0x0114,
+            WM_VSCROLL = 0x0115
+        }
+
+        public static int GetScrollPosition(IntPtr hWnd, ScrollbarDirection direction)
+        {
+            return GetScrollPos(hWnd, (int)direction);
+        }
+
+        public static void GetScrollPosition(IntPtr hWnd, out int horizontalPosition, out int verticalPosition)
+        {
+            horizontalPosition = GetScrollPos(hWnd, (int)ScrollbarDirection.Horizontal);
+            verticalPosition = GetScrollPos(hWnd, (int)ScrollbarDirection.Vertical);
+        }
+
+        public static void SetScrollPosition(IntPtr hwnd, int hozizontalPosition, int verticalPosition)
+        {
+            SetScrollPosition(hwnd, ScrollbarDirection.Horizontal, hozizontalPosition);
+            SetScrollPosition(hwnd, ScrollbarDirection.Vertical, verticalPosition);
+        }
+
+        public static void SetScrollPosition(IntPtr hwnd, ScrollbarDirection direction, int position)
+        {
+            //move the scroll bar
+            SetScrollPos(hwnd, (int)direction, position, true);
+
+            //convert the position to the windows message equivalent
+            var msgPosition = new IntPtr((position << 16) + 4);
+            var msg = (direction == ScrollbarDirection.Horizontal) ? Messages.WM_HSCROLL : Messages.WM_VSCROLL;
+            SendMessage(hwnd, (int)msg, msgPosition, IntPtr.Zero);
+        }
+    }
+}
