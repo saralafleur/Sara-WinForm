@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{53EAD60B-DF68-4A37-9813-E2FC2DB144B1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sara.WinForm</RootNamespace>
+    <AssemblyName>Sara.WinForm</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ColorScheme\ControlNS\IColorSchemeControl.cs" />
+    <Compile Include="ColorScheme\Modal\ColorSchemeBaseModal.cs" />
+    <Compile Include="ColorScheme\Modal\ColorSchemeCollection.cs" />
+    <Compile Include="ColorScheme\Modal\ColorService.cs" />
+    <Compile Include="ColorScheme\Modal\IColorSchemeModal.cs" />
+    <Compile Include="ColorScheme\ViewModel\ColorSchemeViewModel.cs" />
+    <Compile Include="ColorScheme\View\ColorSchemeAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorScheme\View\ColorSchemeAddEdit.Designer.cs">
+      <DependentUpon>ColorSchemeAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorScheme\View\ColorSchemeWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorScheme\View\ColorSchemeWindow.Designer.cs">
+      <DependentUpon>ColorSchemeWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\CheckedItem.cs" />
+    <Compile Include="Common\ReleaseUI.cs" />
+    <Compile Include="Common\ScrollAPIs.cs" />
+    <Compile Include="Common\UICommon.cs" />
+    <Compile Include="ControlsNs\AutoCompleteTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlsNs\BorderPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlsNs\BorderTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlsNs\BufferedTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlsNs\ErrorPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlsNs\ErrorPanel.Designer.cs">
+      <DependentUpon>ErrorPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlsNs\FadeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlsNs\FadeOutState.cs" />
+    <Compile Include="ControlsNs\HighlightBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlsNs\HighlightBar.Designer.cs">
+      <DependentUpon>HighlightBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlsNs\NumericTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlsNs\NumericTextBox.Designer.cs">
+      <DependentUpon>NumericTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlsNs\StatusPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlsNs\StatusPanel.Designer.cs">
+      <DependentUpon>StatusPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlsNs\TitleLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlsNs\TitleLine.Designer.cs">
+      <DependentUpon>TitleLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlsNs\TreeViewFast.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlsNs\WarningPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlsNs\WarningPanel.Designer.cs">
+      <DependentUpon>WarningPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD\ConfirmDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\ConfirmDelete.Designer.cs">
+      <DependentUpon>ConfirmDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD\CRUDUIService.cs" />
+    <Compile Include="CRUD\EditText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\EditText.Designer.cs">
+      <DependentUpon>EditText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD\ICrudModel.cs" />
+    <Compile Include="CRUD\InputMode.cs" />
+    <Compile Include="Custom\InertButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataGridViewHelper.cs" />
+    <Compile Include="ListBoxHelper.cs" />
+    <Compile Include="PersistWindowState.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Threading\ThreadHelper.cs" />
+    <Compile Include="TreeViewHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColorScheme\View\ColorSchemeAddEdit.resx">
+      <DependentUpon>ColorSchemeAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorScheme\View\ColorSchemeWindow.resx">
+      <DependentUpon>ColorSchemeWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlsNs\AutoCompleteTextBox.resx">
+      <DependentUpon>AutoCompleteTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlsNs\BorderPanel.resx">
+      <DependentUpon>BorderPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlsNs\ErrorPanel.resx">
+      <DependentUpon>ErrorPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlsNs\HighlightBar.resx">
+      <DependentUpon>HighlightBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlsNs\StatusPanel.resx">
+      <DependentUpon>StatusPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlsNs\TitleLine.resx">
+      <DependentUpon>TitleLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlsNs\WarningPanel.resx">
+      <DependentUpon>WarningPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\ConfirmDelete.resx">
+      <DependentUpon>ConfirmDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\EditText.resx">
+      <DependentUpon>EditText.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Sara.Common">
+      <HintPath>..\packages\Sara-Common.1.2.5\lib\net48\Sara.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Sara.Logging">
+      <HintPath>..\packages\Sara-Logging.1.2.5\lib\net48\Sara.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sara.WinForm.MVVM\Sara.WinForm.MVVM.csproj">
+      <Project>{8eaddb83-a31e-4f48-8467-ade49cb7d446}</Project>
+      <Name>Sara.WinForm.MVVM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sara.WinForm.Notification\Sara.WinForm.Notification.csproj">
+      <Project>{95db357d-9d41-4469-b752-85d68245f77b}</Project>
+      <Name>Sara.WinForm.Notification</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
