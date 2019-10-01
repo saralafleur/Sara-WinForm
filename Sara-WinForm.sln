@@ -11,13 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NET Framework", ".NET Framework", "{53FC86B4-9C8E-4357-8B32-9BF59B2858F5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NuGet Empty", "NuGet Empty\NuGet Empty.csproj", "{AE82F9C3-3813-42C9-8D02-7F9DE0D4B9F6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sara.WinForm.Notification", "Sara.WinForm.Notification\Sara.WinForm.Notification.csproj", "{95DB357D-9D41-4469-B752-85D68245F77B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sara.WinForm.MVVM", "Sara.WinForm.MVVM\Sara.WinForm.MVVM.csproj", "{8EADDB83-A31E-4F48-8467-ADE49CB7D446}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sara.WinForm", "Sara.WinForm\Sara.WinForm.csproj", "{53EAD60B-DF68-4A37-9813-E2FC2DB144B1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sara-WinForm.NuGet", "Sara-WinForm.NuGet\Sara-WinForm.NuGet.csproj", "{C730D433-7CC7-4E69-BCFA-B506A368A75D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +25,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AE82F9C3-3813-42C9-8D02-7F9DE0D4B9F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AE82F9C3-3813-42C9-8D02-7F9DE0D4B9F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AE82F9C3-3813-42C9-8D02-7F9DE0D4B9F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AE82F9C3-3813-42C9-8D02-7F9DE0D4B9F6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{95DB357D-9D41-4469-B752-85D68245F77B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{95DB357D-9D41-4469-B752-85D68245F77B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95DB357D-9D41-4469-B752-85D68245F77B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,6 +37,10 @@ Global
 		{53EAD60B-DF68-4A37-9813-E2FC2DB144B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53EAD60B-DF68-4A37-9813-E2FC2DB144B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53EAD60B-DF68-4A37-9813-E2FC2DB144B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C730D433-7CC7-4E69-BCFA-B506A368A75D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C730D433-7CC7-4E69-BCFA-B506A368A75D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C730D433-7CC7-4E69-BCFA-B506A368A75D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C730D433-7CC7-4E69-BCFA-B506A368A75D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
