@@ -1,4 +1,4 @@
-﻿namespace Sara.NETFramework.WinForm.ColorScheme.View
+﻿namespace Sara.WinForm.ColorScheme.View
 {
     partial class ColorSchemeWindow
     {
@@ -40,7 +40,7 @@
             this.lbColorScheme = new System.Windows.Forms.ListBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.StatusPanel = new Sara.NETFramework.WinForm.ControlsNS.StatusPanel();
+            this.StatusPanel = new Sara.WinForm.ControlsNS.StatusPanel();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -186,10 +186,10 @@
             this.StatusPanel.Name = "StatusPanel";
             this.StatusPanel.Padding = new System.Windows.Forms.Padding(1);
             this.StatusPanel.Size = new System.Drawing.Size(330, 90);
-            this.StatusPanel.SpDefaultStatusSize = true;
-            this.StatusPanel.SpDisplayRemainingTime = false;
-            this.StatusPanel.SpEnabled = true;
-            this.StatusPanel.SpFullScreen = false;
+            this.StatusPanel.SP_DefaultStatusSize = true;
+            this.StatusPanel.SP_DisplayRemainingTime = false;
+            this.StatusPanel.SP_Enabled = true;
+            this.StatusPanel.SP_FullScreen = false;
             this.StatusPanel.TabIndex = 31;
             this.StatusPanel.Visible = false;
             // 
@@ -226,7 +226,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.PropertyGrid pgColorScheme;
         private System.Windows.Forms.Button btnEdit;
-        private Sara.NETFramework.WinForm.ControlsNS.StatusPanel StatusPanel;
+        private Sara.WinForm.ControlsNS.StatusPanel StatusPanel;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

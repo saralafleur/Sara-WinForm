@@ -4,7 +4,7 @@ using Sara.WinForm.ColorScheme.Modal;
 using Sara.WinForm.ColorScheme.ViewModel;
 using Sara.WinForm.Notification;
 
-namespace Sara.NETFramework.WinForm.ColorScheme.View
+namespace Sara.WinForm.ColorScheme.View
 {
     public partial class ColorSchemeWindow : Form
     {

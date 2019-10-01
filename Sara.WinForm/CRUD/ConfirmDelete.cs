@@ -1,8 +1,8 @@
 ﻿using System.Windows.Forms;
-using Sara.WinForm.ColorScheme.ControlNS;
+using Sara.WinForm.ColorScheme;
 using Sara.WinForm.ColorScheme.Modal;
 
-namespace Sara.NETFramework.WinForm.CRUD
+namespace Sara.WinForm.CRUD
 {
     public partial class ConfirmDelete : Form, IColorSchemeControl
     {

@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 
-namespace Sara.WinForm.ControlsNs
+namespace Sara.WinForm.ControlsNS
 {
     public class FadeOutState
     {

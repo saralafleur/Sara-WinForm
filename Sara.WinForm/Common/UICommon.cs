@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using Sara.NETFramework.WinForm.CRUD;
+using Sara.WinForm.CRUD;
 using TextBox = System.Windows.Forms.TextBox;
 
 namespace Sara.WinForm.Common
 
 {
-    public static class UiCommon
+    public static class UICommon
     {
         /// <summary>
         /// Forces a ListBox to re-evaluate the ToString of it's Items

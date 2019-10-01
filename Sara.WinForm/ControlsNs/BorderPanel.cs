@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Sara.WinForm.ColorScheme.ControlNS;
+using Sara.WinForm.ColorScheme;
 
-namespace Sara.WinForm.ControlsNs
+namespace Sara.WinForm.ControlsNS
 {
     public class BorderPanel : Panel, IColorSchemeControl
     {

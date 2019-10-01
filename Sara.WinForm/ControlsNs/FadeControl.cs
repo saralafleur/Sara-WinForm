@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
 
-namespace Sara.WinForm.ControlsNs
+namespace Sara.WinForm.ControlsNS
 {
     public class FadeControl : UserControl
     {

@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Sara.NETFramework.WinForm.Notification")]
+[assembly: AssemblyTitle("Sara.WinForm.Notification")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sara")]
-[assembly: AssemblyProduct("Sara.NETFramework.WinForm.Notification")]
-[assembly: AssemblyCopyright("Sara LaFleur, 2019")]
+[assembly: AssemblyProduct("Sara.WinForm.Notification")]
+[assembly: AssemblyCopyright("(c) 2019, Sara LaFleur")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

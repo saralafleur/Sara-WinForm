@@ -1,6 +1,6 @@
 ﻿using WeifenLuo.WinFormsUI.Docking;
 
-namespace Sara.NETFramework.WinForm.MVVM.View
+namespace Sara.WinForm.MVVM.View
 {
     public partial class ToolWindow : DockContent
     {

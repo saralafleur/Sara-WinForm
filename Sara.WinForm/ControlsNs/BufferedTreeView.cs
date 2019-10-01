@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace Sara.WinForm.ControlsNs
+namespace Sara.WinForm.ControlsNS
 {
     public class BufferedTreeView : TreeView {
         protected override void OnHandleCreated(EventArgs e) {

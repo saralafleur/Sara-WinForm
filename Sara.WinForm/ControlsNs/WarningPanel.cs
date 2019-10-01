@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace Sara.NETFramework.WinForm.ControlsNS
+namespace Sara.WinForm.ControlsNS
 {
     public partial class WarningPanel : UserControl
     {

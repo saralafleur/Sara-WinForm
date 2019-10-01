@@ -1,4 +1,4 @@
-﻿namespace Sara.NETFramework.WinForm.CRUD
+﻿namespace Sara.WinForm.CRUD
 {
     partial class ConfirmDelete
     {

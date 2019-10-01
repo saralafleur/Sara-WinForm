@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using Sara.NETFramework.WinForm.ColorScheme.View;
+using Sara.WinForm.ColorScheme.View;
 using Sara.WinForm.ColorScheme.Modal;
 
 namespace Sara.WinForm.ColorScheme.ViewModel

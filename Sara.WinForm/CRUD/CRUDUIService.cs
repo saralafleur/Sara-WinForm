@@ -6,7 +6,7 @@ using Sara.WinForm.MVVM;
 
 namespace Sara.WinForm.CRUD
 {
-    public static class CrudUiService
+    public static class CRUDUIService
     {
         public static void Add<TWindowClass, TCrudModel, TCrudValue>(Action<TCrudModel> saveEvent)
             where TWindowClass : class, IView<TCrudModel, TCrudValue> 

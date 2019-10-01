@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Sara.NETFramework.WinForm.MVVM")]
+[assembly: AssemblyTitle("Sara.WinForm.MVVM")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sara")]
-[assembly: AssemblyProduct("Sara.NETFramework.WinForm.MVVM")]
+[assembly: AssemblyProduct("Sara.WinForm.MVVM")]
 [assembly: AssemblyCopyright("Sara LaFleur, 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

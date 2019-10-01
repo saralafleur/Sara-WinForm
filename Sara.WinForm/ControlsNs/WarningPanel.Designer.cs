@@ -1,4 +1,4 @@
-﻿namespace Sara.NETFramework.WinForm.ControlsNS
+﻿namespace Sara.WinForm.ControlsNS
 {
     partial class WarningPanel
     {

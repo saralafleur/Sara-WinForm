@@ -1,4 +1,4 @@
-﻿namespace Sara.WinForm.ColorScheme.ControlNS
+﻿namespace Sara.WinForm.ColorScheme
 {
     public interface IColorSchemeControl
     {

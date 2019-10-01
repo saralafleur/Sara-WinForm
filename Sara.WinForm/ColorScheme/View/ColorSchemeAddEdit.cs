@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using Sara.WinForm.ColorScheme.Modal;
 
-namespace Sara.NETFramework.WinForm.ColorScheme.View
+namespace Sara.WinForm.ColorScheme.View
 {
     public partial class ColorSchemeAddEdit : Form
     {

@@ -13,7 +13,7 @@ namespace Sara.WinForm.Common
     /// <summary>
     /// Release can be used on a long running process on the Main UI Thread.
     /// </summary>
-    public class ReleaseUi
+    public class ReleaseUI
     {
         private int _iteration;
         private readonly string _name;
@@ -21,7 +21,7 @@ namespace Sara.WinForm.Common
         private DateTime _lastStart;
         private DateTime _lastStop;
         private readonly bool _skipLogging;
-        public ReleaseUi(string name = "RELEASE", bool skipLogging = false)
+        public ReleaseUI(string name = "RELEASE", bool skipLogging = false)
         {
             _start = DateTime.Now;
             _lastStart = DateTime.Now;
@@ -49,7 +49,7 @@ namespace Sara.WinForm.Common
             var m = doEvent ? "" : "Stop ";
             var c = comment == null ? "" : $" {comment}";
             var message = $"{_name} DoEvents({_iteration}{c}) {m}- {duration.ToShortReadableString()} | {fullDuration.ToShortReadableString()}";
-            Log.Write(message, typeof(ReleaseUi).FullName, MethodBase.GetCurrentMethod().Name);
+            Log.Write(message, typeof(ReleaseUI).FullName, MethodBase.GetCurrentMethod().Name);
             if (!_skipLogging) ReleaseOutput.Log?.Invoke(message);
         }
 

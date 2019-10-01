@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Sara.WinForm.ControlsNs
+namespace Sara.WinForm.ControlsNS
 {
     public class TreeViewFast : TreeView
     {

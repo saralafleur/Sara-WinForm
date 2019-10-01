@@ -1,8 +1,8 @@
 ﻿using System.Windows.Forms;
-using Sara.WinForm.ColorScheme.ControlNS;
+using Sara.WinForm.ColorScheme;
 using Sara.WinForm.ColorScheme.Modal;
 
-namespace Sara.NETFramework.WinForm.ControlsNS
+namespace Sara.WinForm.ControlsNS
 {
     public partial class TitleLine : UserControl, IColorSchemeControl
     {

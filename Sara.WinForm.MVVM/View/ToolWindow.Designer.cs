@@ -1,4 +1,4 @@
-﻿namespace Sara.NETFramework.WinForm.MVVM.View
+﻿namespace Sara.WinForm.MVVM.View
 {
     partial class ToolWindow
     {

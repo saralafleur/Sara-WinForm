@@ -1,4 +1,4 @@
-﻿namespace Sara.NETFramework.WinForm.ColorScheme.View
+﻿namespace Sara.WinForm.ColorScheme.View
 {
     partial class ColorSchemeAddEdit
     {

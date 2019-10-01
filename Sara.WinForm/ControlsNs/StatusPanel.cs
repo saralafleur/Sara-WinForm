@@ -6,25 +6,24 @@ using System.Threading;
 using System.Windows.Forms;
 using Sara.Common.Extension;
 using Sara.Logging;
-using Sara.WinForm.ColorScheme.ControlNS;
+using Sara.WinForm.ColorScheme;
 using Sara.WinForm.ColorScheme.Modal;
-using Sara.WinForm.ControlsNs;
 using Sara.WinForm.Notification;
 using Timer = System.Threading.Timer;
 
-namespace Sara.NETFramework.WinForm.ControlsNS
+namespace Sara.WinForm.ControlsNS
 {
     public partial class StatusPanel : UserControl, IColorSchemeControl
     {
         #region Public Properties
         [Description("When True the Status Panel will calculate the Time Remaining based on Current and Total."), Category("StatusPanel")]
-        public bool SpDisplayRemainingTime { get; set; }
+        public bool SP_DisplayRemainingTime { get; set; }
         /// <summary>
         /// When True the Control will become the Top Control and Dock will be set to Fill
         /// </summary>
         [Description("When True the Status Panel will be Full Screen."), Category("StatusPanel")]
         private bool _fullscreen;
-        public bool SpFullScreen
+        public bool SP_FullScreen
         {
             get => _fullscreen;
             set
@@ -38,9 +37,9 @@ namespace Sara.NETFramework.WinForm.ControlsNS
         /// The Default Size is used to ensure each Status Panel is the same size.
         /// </summary>
         [Description("When True the Status Panel will be set to a Default Size."), Category("StatusPanel")]
-        public bool SpDefaultStatusSize { get; set; }
+        public bool SP_DefaultStatusSize { get; set; }
         [Description("When False the Status Panel will not display anything on the screen.  Used when an update takes less then 250ms."), Category("StatusPanel")]
-        public bool SpEnabled { get; set; }
+        public bool SP_Enabled { get; set; }
 
         public void ApplyColorScheme()
         {
@@ -84,13 +83,13 @@ namespace Sara.NETFramework.WinForm.ControlsNS
         {
             InitializeComponent();
             Started = null;
-            SpDisplayRemainingTime = false;
+            SP_DisplayRemainingTime = false;
             _fadeOutState = new FadeOutState { Canceled = true };
             Visible = false;
-            SpDefaultStatusSize = true;
-            SpFullScreen = true; // Default
+            SP_DefaultStatusSize = true;
+            SP_FullScreen = true; // Default
             BackGroundThreads = 0;
-            SpEnabled = true;
+            SP_Enabled = true;
 
             if (!DesignMode)
                 ColorService.Setup(this);
@@ -158,7 +157,7 @@ namespace Sara.NETFramework.WinForm.ControlsNS
         }
         public void StatusUpdate(IStatusModel model)
         {
-            if (!SpEnabled)
+            if (!SP_Enabled)
                 return;
 
             try
@@ -183,10 +182,10 @@ namespace Sara.NETFramework.WinForm.ControlsNS
                         _persistentDetail += model.StatusDetail + Environment.NewLine;
                         return;
                     case StatusAction.ShowEstimatedTime:
-                        SpDisplayRemainingTime = true;
+                        SP_DisplayRemainingTime = true;
                         return;
                     case StatusAction.HideEstimatedTime:
-                        SpDisplayRemainingTime = false;
+                        SP_DisplayRemainingTime = false;
                         SetStatusDetail("");
                         return;
                     case StatusAction.StartStopWatch:
@@ -229,10 +228,10 @@ namespace Sara.NETFramework.WinForm.ControlsNS
                         FadeOut(1000);
                         break;
                     case StatusAction.FullScreenOn:
-                        SpFullScreen = true;
+                        SP_FullScreen = true;
                         return;
                     case StatusAction.FullScreenOff:
-                        SpFullScreen = false;
+                        SP_FullScreen = false;
                         return;
                     case StatusAction.Complete:
                         if (BackGroundThreads != 0)
@@ -268,14 +267,14 @@ namespace Sara.NETFramework.WinForm.ControlsNS
                     SetStatus(model.Status);
                 }
 
-                if (model.StatusDetail == null && !SpDisplayRemainingTime) return;
+                if (model.StatusDetail == null && !SP_DisplayRemainingTime) return;
 
                 if (model.StatusDetail == null)
                     model.StatusDetail = string.Empty;
 
 
                 _detailMessage = _persistentDetail == string.Empty ? model.StatusDetail : _persistentDetail + "-----" + Environment.NewLine + model.StatusDetail;
-                if (SpDisplayRemainingTime)
+                if (SP_DisplayRemainingTime)
                     _detailMessage += Environment.NewLine + string.Format("Estimated Time Remaining {0}", TimeRemaining.ToReadableString());
 
                 SetStatusDetail(_detailMessage);

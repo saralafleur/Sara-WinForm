@@ -31,7 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="ColorScheme\ControlNS\IColorSchemeControl.cs" />
+    <Compile Include="ColorScheme\IColorSchemeControl.cs" />
     <Compile Include="ColorScheme\Modal\ColorSchemeBaseModal.cs" />
     <Compile Include="ColorScheme\Modal\ColorSchemeCollection.cs" />
     <Compile Include="ColorScheme\Modal\ColorService.cs" />
@@ -53,59 +53,59 @@
     <Compile Include="Common\ReleaseUI.cs" />
     <Compile Include="Common\ScrollAPIs.cs" />
     <Compile Include="Common\UICommon.cs" />
-    <Compile Include="ControlsNs\AutoCompleteTextBox.cs">
+    <Compile Include="ControlsNS\AutoCompleteTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ControlsNs\BorderPanel.cs">
+    <Compile Include="ControlsNS\BorderPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ControlsNs\BorderTextBox.cs">
+    <Compile Include="ControlsNS\BorderTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ControlsNs\BufferedTreeView.cs">
+    <Compile Include="ControlsNS\BufferedTreeView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ControlsNs\ErrorPanel.cs">
+    <Compile Include="ControlsNS\ErrorPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ControlsNs\ErrorPanel.Designer.cs">
+    <Compile Include="ControlsNS\ErrorPanel.Designer.cs">
       <DependentUpon>ErrorPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="ControlsNs\FadeControl.cs">
+    <Compile Include="ControlsNS\FadeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ControlsNs\FadeOutState.cs" />
-    <Compile Include="ControlsNs\HighlightBar.cs">
+    <Compile Include="ControlsNS\FadeOutState.cs" />
+    <Compile Include="ControlsNS\HighlightBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ControlsNs\HighlightBar.Designer.cs">
+    <Compile Include="ControlsNS\HighlightBar.Designer.cs">
       <DependentUpon>HighlightBar.cs</DependentUpon>
     </Compile>
-    <Compile Include="ControlsNs\NumericTextBox.cs">
+    <Compile Include="ControlsNS\NumericTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ControlsNs\NumericTextBox.Designer.cs">
+    <Compile Include="ControlsNS\NumericTextBox.Designer.cs">
       <DependentUpon>NumericTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="ControlsNs\StatusPanel.cs">
+    <Compile Include="ControlsNS\StatusPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ControlsNs\StatusPanel.Designer.cs">
+    <Compile Include="ControlsNS\StatusPanel.Designer.cs">
       <DependentUpon>StatusPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="ControlsNs\TitleLine.cs">
+    <Compile Include="ControlsNS\TitleLine.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ControlsNs\TitleLine.Designer.cs">
+    <Compile Include="ControlsNS\TitleLine.Designer.cs">
       <DependentUpon>TitleLine.cs</DependentUpon>
     </Compile>
-    <Compile Include="ControlsNs\TreeViewFast.cs">
+    <Compile Include="ControlsNS\TreeViewFast.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ControlsNs\WarningPanel.cs">
+    <Compile Include="ControlsNS\WarningPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ControlsNs\WarningPanel.Designer.cs">
+    <Compile Include="ControlsNS\WarningPanel.Designer.cs">
       <DependentUpon>WarningPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="CRUD\ConfirmDelete.cs">
@@ -128,7 +128,9 @@
     </Compile>
     <Compile Include="DataGridViewHelper.cs" />
     <Compile Include="ListBoxHelper.cs" />
-    <Compile Include="PersistWindowState.cs" />
+    <Compile Include="PersistWindowState.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Threading\ThreadHelper.cs" />
     <Compile Include="TreeViewHelper.cs" />
@@ -140,25 +142,25 @@
     <EmbeddedResource Include="ColorScheme\View\ColorSchemeWindow.resx">
       <DependentUpon>ColorSchemeWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControlsNs\AutoCompleteTextBox.resx">
+    <EmbeddedResource Include="ControlsNS\AutoCompleteTextBox.resx">
       <DependentUpon>AutoCompleteTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControlsNs\BorderPanel.resx">
+    <EmbeddedResource Include="ControlsNS\BorderPanel.resx">
       <DependentUpon>BorderPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControlsNs\ErrorPanel.resx">
+    <EmbeddedResource Include="ControlsNS\ErrorPanel.resx">
       <DependentUpon>ErrorPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControlsNs\HighlightBar.resx">
+    <EmbeddedResource Include="ControlsNS\HighlightBar.resx">
       <DependentUpon>HighlightBar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControlsNs\StatusPanel.resx">
+    <EmbeddedResource Include="ControlsNS\StatusPanel.resx">
       <DependentUpon>StatusPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControlsNs\TitleLine.resx">
+    <EmbeddedResource Include="ControlsNS\TitleLine.resx">
       <DependentUpon>TitleLine.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControlsNs\WarningPanel.resx">
+    <EmbeddedResource Include="ControlsNS\WarningPanel.resx">
       <DependentUpon>WarningPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD\ConfirmDelete.resx">
@@ -172,18 +174,20 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Sara.Common">
-      <HintPath>..\packages\Sara-Common.1.2.5\lib\net48\Sara.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Sara.Logging">
-      <HintPath>..\packages\Sara-Logging.1.2.5\lib\net48\Sara.Logging.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Sara-Common\Sara.Common\Sara.Common.csproj">
+      <Project>{2caf91c7-53cd-4e6f-9fc2-da6d00e3440e}</Project>
+      <Name>Sara.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Sara-Logging\Sara.Logging\Sara.Logging.csproj">
+      <Project>{7c0a5697-4b45-4ee1-bb35-edd87a440238}</Project>
+      <Name>Sara.Logging</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sara.WinForm.MVVM\Sara.WinForm.MVVM.csproj">
       <Project>{8eaddb83-a31e-4f48-8467-ade49cb7d446}</Project>
       <Name>Sara.WinForm.MVVM</Name>
@@ -193,5 +197,6 @@
       <Name>Sara.WinForm.Notification</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,9 +4,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
 using System.Xml.Serialization;
-using Sara.NETFramework.WinForm.ControlsNS;
-using Sara.WinForm.ColorScheme.ControlNS;
-using Sara.WinForm.ControlsNs;
+using Sara.WinForm.ControlsNS;
 
 namespace Sara.WinForm.ColorScheme.Modal
 {

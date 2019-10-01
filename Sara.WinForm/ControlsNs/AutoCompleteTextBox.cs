@@ -6,7 +6,8 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Sara.WinForm.Common;
 
-namespace Sara.WinForm.ControlsNs
+namespace Sara.WinForm.ControlsNS
+
 {
     public class AutoCompleteTextBox : TextBox
     {

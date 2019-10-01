@@ -1,10 +1,10 @@
 ﻿using System.Windows.Forms;
 using System;
-using Sara.WinForm.ColorScheme.ControlNS;
+using Sara.WinForm.ColorScheme;
 using Sara.WinForm.ColorScheme.Modal;
 using Sara.WinForm.Common;
 
-namespace Sara.NETFramework.WinForm.CRUD
+namespace Sara.WinForm.CRUD
 {
     public partial class EditText : Form, IColorSchemeControl
     {
