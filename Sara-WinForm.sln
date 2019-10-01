@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sara.WinForm.MVVM", "Sara.W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sara.WinForm", "Sara.WinForm\Sara.WinForm.csproj", "{53EAD60B-DF68-4A37-9813-E2FC2DB144B1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sara-WinForm.NuGet", "Sara-WinForm.NuGet\Sara-WinForm.NuGet.csproj", "{C730D433-7CC7-4E69-BCFA-B506A368A75D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sara-WinForm.NuGet", "Sara-WinForm.NuGet\Sara-WinForm.NuGet.csproj", "{AEAD3C95-26A0-40F4-AA30-5EEBEADC7A4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +37,10 @@ Global
 		{53EAD60B-DF68-4A37-9813-E2FC2DB144B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53EAD60B-DF68-4A37-9813-E2FC2DB144B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53EAD60B-DF68-4A37-9813-E2FC2DB144B1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C730D433-7CC7-4E69-BCFA-B506A368A75D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C730D433-7CC7-4E69-BCFA-B506A368A75D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C730D433-7CC7-4E69-BCFA-B506A368A75D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C730D433-7CC7-4E69-BCFA-B506A368A75D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEAD3C95-26A0-40F4-AA30-5EEBEADC7A4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEAD3C95-26A0-40F4-AA30-5EEBEADC7A4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEAD3C95-26A0-40F4-AA30-5EEBEADC7A4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEAD3C95-26A0-40F4-AA30-5EEBEADC7A4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

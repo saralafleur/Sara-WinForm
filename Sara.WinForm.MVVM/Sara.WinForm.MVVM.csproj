@@ -33,24 +33,6 @@
   <ItemGroup>
     <Reference Include="Accessibility" />
     <Reference Include="PresentationCore" />
-    <Reference Include="Sara.Common, Version=1.2.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sara-Common.1.2.5\lib\net48\Sara.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Sara.Common.Ext, Version=1.2.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sara-Common.1.2.5\lib\net48\Sara.Common.Ext.dll</HintPath>
-    </Reference>
-    <Reference Include="Sara.Logging, Version=1.2.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sara-Logging.1.2.5\lib\net48\Sara.Logging.dll</HintPath>
-    </Reference>
-    <Reference Include="Sara.Logging.WinEvent.Writers, Version=1.2.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sara-Logging.1.2.5\lib\net48\Sara.Logging.WinEvent.Writers.dll</HintPath>
-    </Reference>
-    <Reference Include="Sara.Logging.Writers, Version=1.2.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sara-Logging.1.2.5\lib\net48\Sara.Logging.Writers.dll</HintPath>
-    </Reference>
-    <Reference Include="Sara.ReadOnlyDictionary, Version=1.2.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sara-Common.1.2.5\lib\net48\Sara.ReadOnlyDictionary.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -88,7 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Sara-dockpanelsuite">
-      <Version>3.1.0.109</Version>
+      <Version>3.1.0.1095</Version>
     </PackageReference>
     <PackageReference Include="Sara-Logging">
       <Version>1.2.9</Version>

@@ -1,20 +1,99 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>NuGet_Empty</RootNamespace>
-    <Version>1.2.9</Version>
-	<Package>Sara-WinForm</Package>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AEAD3C95-26A0-40F4-AA30-5EEBEADC7A4B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sara_WinForm.NuGet</RootNamespace>
+    <AssemblyName>Sara-WinForm.NuGet</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <Package>Sara-WinForm</Package>
+    <Version>1.2.9.5</Version>
   </PropertyGroup>
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="if $(ConfigurationName) == Release (&#xD;&#xA;&#xD;&#xA;  if not exist &quot;$(ProjectDir)..\NuGet Output&quot; mkdir &quot;$(ProjectDir)..\NuGet Output&quot;&#xD;&#xA;&#xD;&#xA;  cd $(ProjectDir)..\&#xD;&#xA;  echo ---Packing $(Package).nupkg&#xD;&#xA;  nuget pack $(Package).nuspec -OutputDirectory &quot;$(ProjectDir)..\NuGet Output&quot;&#xD;&#xA;&#xD;&#xA;  if exist &quot;$(ProjectDir)..\NuGet Output\$(Package).$(Version).nupkg&quot; (&#xD;&#xA;    echo ...&#xD;&#xA;    echo            NuGet Packaged - SUCCESS $(Version)&#xD;&#xA;    echo ...&#xD;&#xA;  ) else (&#xD;&#xA;    echo ...&#xD;&#xA;    echo            NuGet Packaged - XXXX FAILURE $(Version) XXXX&#xD;&#xA;    echo ...&#xD;&#xA;  )&#xD;&#xA;&#xD;&#xA;  :: The following is for a local copy of the NuGet Repository&#xD;&#xA;  echo ---Reminder: The version in $(Package).nuspec must match the NuGet Empty Project version.&#xD;&#xA;  echo ---Deploying local NuGet Repository&#xD;&#xA;  if exist &quot;E:\Nuget Output&quot; (&#xD;&#xA;    echo ---Copying $(Package).$(Version).nupkg&#xD;&#xA;    copy &quot;$(ProjectDir)..\NuGet Output\$(Package).$(Version).nupkg&quot; &quot;E:\NuGet Output\&quot;&#xD;&#xA;    &#xD;&#xA;    echo ...&#xD;&#xA;    echo ---INITIALIZE local NuGet Repository&#xD;&#xA;    rd /s/q &quot;E:\NuGet Repository&quot;&#xD;&#xA;    mkdir &quot;E:\NuGet Repository&quot;&#xD;&#xA;    nuget init &quot;E:\Nuget Output&quot; &quot;E:\Nuget Repository&quot;&#xD;&#xA;    echo ---Complete..&#xD;&#xA;  )&#xD;&#xA;&#xD;&#xA;)" />
-  </Target>
-
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Sara.WinForm.MVVM\Sara.WinForm.MVVM.csproj" />
-    <ProjectReference Include="..\Sara.WinForm.Notification\Sara.WinForm.Notification.csproj" />
-    <ProjectReference Include="..\Sara.WinForm\Sara.WinForm.csproj" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sara.WinForm.MVVM\Sara.WinForm.MVVM.csproj">
+      <Project>{8eaddb83-a31e-4f48-8467-ade49cb7d446}</Project>
+      <Name>Sara.WinForm.MVVM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sara.WinForm.Notification\Sara.WinForm.Notification.csproj">
+      <Project>{95db357d-9d41-4469-b752-85d68245f77b}</Project>
+      <Name>Sara.WinForm.Notification</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sara.WinForm\Sara.WinForm.csproj">
+      <Project>{53ead60b-df68-4a37-9813-e2fc2db144b1}</Project>
+      <Name>Sara.WinForm</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName) == Release (
 
+  if not exist "$(ProjectDir)..\NuGet Output" mkdir "$(ProjectDir)..\NuGet Output"
+
+  cd $(ProjectDir)..\
+  echo ---Packing $(Package).nupkg
+  nuget pack $(Package).nuspec -OutputDirectory "$(ProjectDir)..\NuGet Output"
+
+  if exist "$(ProjectDir)..\NuGet Output\$(Package).$(Version).nupkg" (
+    echo ...
+    echo            NuGet Packaged - SUCCESS $(Version)
+    echo ...
+  ) else (
+    echo ...
+    echo            NuGet Packaged - XXXX FAILURE $(Version) XXXX
+    echo ...
+  )
+
+  :: The following is for a local copy of the NuGet Repository
+  echo ---Reminder: The version in $(Package).nuspec must match the NuGet Empty Project version.
+  echo ---Deploying local NuGet Repository
+  if exist "E:\Nuget Output" (
+    echo ---Copying $(Package).$(Version).nupkg
+    copy "$(ProjectDir)..\NuGet Output\$(Package).$(Version).nupkg" "E:\NuGet Output\"
+    
+    echo ...
+    echo ---INITIALIZE local NuGet Repository
+    rd /s/q "E:\NuGet Repository"
+    mkdir "E:\NuGet Repository"
+    nuget init "E:\Nuget Output" "E:\Nuget Repository"
+    echo ---Complete..
+  )
+
+)</PostBuildEvent>
+  </PropertyGroup>
 </Project>
