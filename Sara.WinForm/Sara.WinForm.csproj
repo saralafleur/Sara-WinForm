@@ -174,20 +174,30 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Sara.Common, Version=1.2.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sara-Common.1.2.9\lib\net48\Sara.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Sara.Common.Ext, Version=1.2.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sara-Common.1.2.9\lib\net48\Sara.Common.Ext.dll</HintPath>
+    </Reference>
+    <Reference Include="Sara.Logging, Version=1.2.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sara-Logging.1.2.9\lib\net48\Sara.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Sara.Logging.WinEvent.Writers, Version=1.2.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sara-Logging.1.2.9\lib\net48\Sara.Logging.WinEvent.Writers.dll</HintPath>
+    </Reference>
+    <Reference Include="Sara.Logging.Writers, Version=1.2.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sara-Logging.1.2.9\lib\net48\Sara.Logging.Writers.dll</HintPath>
+    </Reference>
+    <Reference Include="Sara.ReadOnlyDictionary, Version=1.2.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sara-Common.1.2.9\lib\net48\Sara.ReadOnlyDictionary.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Sara-Common\Sara.Common\Sara.Common.csproj">
-      <Project>{2caf91c7-53cd-4e6f-9fc2-da6d00e3440e}</Project>
-      <Name>Sara.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Sara-Logging\Sara.Logging\Sara.Logging.csproj">
-      <Project>{7c0a5697-4b45-4ee1-bb35-edd87a440238}</Project>
-      <Name>Sara.Logging</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Sara.WinForm.MVVM\Sara.WinForm.MVVM.csproj">
       <Project>{8eaddb83-a31e-4f48-8467-ade49cb7d446}</Project>
       <Name>Sara.WinForm.MVVM</Name>

@@ -76,10 +76,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Sara-dockpanelsuite\WinFormsUI\WinFormsUI.csproj">
-      <Project>{c75532c4-765b-418e-b09b-46d36b2abdb1}</Project>
-      <Name>WinFormsUI</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Sara.WinForm.Notification\Sara.WinForm.Notification.csproj">
       <Project>{95db357d-9d41-4469-b752-85d68245f77b}</Project>
       <Name>Sara.WinForm.Notification</Name>
@@ -89,6 +85,14 @@
     <EmbeddedResource Include="View\ToolWindow.resx">
       <DependentUpon>ToolWindow.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Sara-dockpanelsuite">
+      <Version>3.1.0.109</Version>
+    </PackageReference>
+    <PackageReference Include="Sara-Logging">
+      <Version>1.2.9</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
