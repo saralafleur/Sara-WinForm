@@ -19,7 +19,7 @@
       <group targetFramework="net48">
         <dependency id="Sara-Common" version="[1.2.9,2)" />
         <dependency id="Sara-Logging" version="[1.2.9,2)" />
-        <dependency id="Sara-dockpanelsuite" version="3.1.0.100" />
+        <dependency id="Sara-dockpanelsuite" version="3.1.0.109" />
       </group>
     </dependencies>
   </metadata>
